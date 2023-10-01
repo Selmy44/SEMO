@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Social Media Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="social-media-feed"></div>
+
+    <script>
+        const posts = [
+            { username: 'user1', post: 'This is the first post.' },
+            { username: 'user2', post: 'Another post here.' },
+            { username: 'user3', post: 'And one more for good measure.' }
+        ];
+
+        const socialMediaFeed = document.getElementById('social-media-feed');
+
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `<strong>${post.username}</strong>: ${post.post}`;
+            socialMediaFeed.appendChild(postElement);
+        });
+    </script>
+</body>
+
+</html>
