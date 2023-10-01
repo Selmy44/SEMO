@@ -1,5 +1,5 @@
 # SEMO
-SEMO website is a social media website that will help people to chat and post media like photos and videos
+SEMO website is a social platform that will help people to chat and post their photos and videos
 <!DOCTYPE html>
 <html lang="en">
 <head>
