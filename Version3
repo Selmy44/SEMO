@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #post-form {
+            margin-bottom: 20px;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to My Social Media</h1>
+        <div id="post-form">
+            <h2>Create a Post</h2>
+            <textarea id="post-text" rows="4" cols="50" placeholder="Write your post"></textarea>
+            <button id="post-button">Post</button>
+        </div>
+        <div id="feed">
+            <h2>Feed</h2>
+        </div>
+    </div>
+    <script>
+        const postButton = document.getElementById('post-button');
+        const postText = document.getElementById('post-text');
+        const feed = document.getElementById('feed');
+
+        postButton.addEventListener('click', () => {
+            const text = postText.value;
+            if (text.trim() !== '') {
+                const post = document.createElement('div');
+                post.className = 'post';
+                post.textContent = text;
+                feed.appendChild(post);
+                postText.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
